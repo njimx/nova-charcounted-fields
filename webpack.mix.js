@@ -11,7 +11,7 @@ mix
       vue: 'Vue',
     },
     output: {
-      uniqueName: 'njimx/nova-multiselect-filter',
+      uniqueName: 'njimx/nova-charcounted-fields',
     },
   })
   .alias({
