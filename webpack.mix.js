@@ -1,11 +1,19 @@
-let mix = require("laravel-mix");
+let mix = require('laravel-mix');
+let path = require('path');
 
 mix
-  .js("resources/js/field.js", "dist/js")
-  .sass("resources/sass/field.scss", "dist/css")
-  .vue()
+  .setPublicPath('dist')
+  .js('resources/js/field.js', 'js')
+  .vue({ version: 3 })
+  .sass('resources/sass/field.scss', 'css')
   .webpackConfig({
-    resolve: {
-      symlinks: false,
+    externals: {
+      vue: 'Vue',
     },
+    output: {
+      uniqueName: 'njimx/nova-multiselect-filter',
+    },
+  })
+  .alias({
+    'laravel-nova': path.join(__dirname, 'vendor/laravel/nova/resources/js/mixins/packages.js'),
   });

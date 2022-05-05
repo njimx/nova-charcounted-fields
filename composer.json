@@ -1,5 +1,5 @@
 {
-    "name": "elevate-digital/nova-charcounted-fields",
+    "name": "njimx/nova-charcounted-fields",
     "description": "Text and textarea fields with a character counter.",
     "keywords": [
         "laravel",
@@ -9,6 +9,15 @@
     "require": {
         "php": ">=7.1.0"
     },
+    "require-dev": {
+        "laravel/nova": "^4.0"
+    },
+    "repositories": [
+    {
+        "type": "composer",
+        "url": "https://nova.laravel.com"
+    }
+    ],
     "autoload": {
         "psr-4": {
             "ElevateDigital\\CharcountedFields\\": "src/"
